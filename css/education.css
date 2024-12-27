@@ -1,0 +1,84 @@
+
+.name{
+  text-align: left;
+
+  /* border: 2px solid dodgerblue; */
+}
+
+h2{
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.table-container {
+  width: 90%;
+  margin-left: 60px;
+  
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.responsive-table th{
+  border: 4px solid white;
+  text-align: left;
+  padding: 10px;
+
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.responsive-table th {
+  background-color: black;
+  font-weight: bold;
+}
+
+.responsive-table tbody tr td {
+  background-color: black;
+  padding: 10px;
+  border: 4px solid white;
+
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.responsive-table tbody tr:hover {
+  background-color: red;
+}
+
+@media (max-width: 768px) {
+  .responsive-table thead {
+    display: none;
+  }
+
+  .responsive-table tbody tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .responsive-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  .responsive-table tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    flex-basis: 50%;
+    text-align: left;
+  }
+
+  .responsive-table tbody td:last-child {
+    border-bottom: 1px solid #ddd;
+  }
+}
